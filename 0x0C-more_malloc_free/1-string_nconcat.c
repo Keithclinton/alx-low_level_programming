@@ -1,45 +1,51 @@
 #include "main.h"
-
-
-
 /**
-* string_nconcat - a function that concatenates two strings.
-*
-* @s1: first char
-* @s2: secound char
-* @n: unsigned int
-*
-* Return: If the function fails, it should return NULL
-*/
+ * string_nconcat - concatenates two strings.
+ * @s1: the first String
+ * @s2: the second string
+ * @n: index
+ * t: repesents pointer
+ * a: is the counter
+ *
+ * Return: return char is sucess
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-unsigned int x, y, z;
-char *s;
-if (s1 == NULL)
-{
-x = 0;
-}
-else
-{
-for (x = 0; s1[x]; ++x;)
-}
-if (s2 == NULL)
-{
-y = 0;
-}
-else
-{
-for (y = 0; s2[y]; ++y;)
-}
-if (y > n)
-y = n;
-s = malloc(sizeof(char) * (x + y + 1));
-if (s == NULL)
-return (NULL);
-for (z = 0; z < x; z++)
-s[z] = s1[z];
-for (z = 0; z < y; z++)
-s[z + x] = s2[z];
-s[x + y] = '\0';
-return (s);
+	char *t;
+	unsigned int size1 = 0, size2 = 0, k;
+
+	if (s1 == NULL)
+		s1 = "";
+
+	if (s2 == NULL)
+		s2 = "";
+
+	while (s1[size1] != '\0')
+	{
+		size1++;
+	}
+	while (s2[size2] != '\0')
+	{
+		size2++;
+	}
+
+	if (n > size2)
+	n = size2;
+	t = malloc((size1 + n + 1) * sizeof(char));
+
+	if (t == NULL)
+		return (0);
+
+	for (k = 0; k < size1; k++)
+	{
+		t[k] = s1[k];
+	}
+
+	for (; k < (size1 + n); k++)
+	{
+		t[k] = s2[k - size1];
+	}
+	t[k] = '\0';
+
+	return (t);
 }
