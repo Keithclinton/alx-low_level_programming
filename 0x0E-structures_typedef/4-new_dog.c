@@ -8,7 +8,7 @@
 	 *
 	 * Return: the length of the string
 	 */
-	int _strlen(char *s)
+	_strlen(char *s)
 	{
 		int i;
 
@@ -35,7 +35,7 @@
 	 *
 	 * Return: the pointer to dest
 	 */
-	char *_strcpy(char *dest, char *src)
+	*_strcpy(char *dest, char *src)
 	{
 		int len, i;
 
@@ -68,7 +68,7 @@
 	 *
 	 * Return: pointer to the new dog (Success), NULL otherwise
 	 */
-	dog_t *new_dog(char *name, float age, char *owner)
+	*new_dog(char *name, float age, char *owner)
 	{
 		dog_t *dog;
 		int len1, len2;
