@@ -5,7 +5,7 @@
  * i - its a function
  * Return: Always 0 (Success)
  */
-	i(void)
+	int i(void)
 {
 	printf("%s\n", __FILE__);
 	return (0);
