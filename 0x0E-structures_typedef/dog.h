@@ -3,13 +3,13 @@
 
 
 	/**
-	 * struct dog - a struct dog's basic info
+	 * dog_t- a struct dog's basic info
 	 * @name: name of the struct dog
 	 * @age: age of the struct dog
 	 * @owner: Owner of the struct dog
-	 * @Description : it describes the age name and owner of the struct dog
+	 * @Description: it describes the age name and owner of the struct dog
 	 */
-	struct dog
+	dog_t
 	{
 		char *name;
 		float age;
