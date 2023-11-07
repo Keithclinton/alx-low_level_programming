@@ -1,8 +1,14 @@
-#ifndef OBJECT_LIKE_MACRO_H
-#define OBJECT_LIKE_MACRO_H
+#include <stdio.h>
 
-#define SIZE 1024
+/**
+ * main - Code Execution Begins
+ *
+ * Return: 0 is sucess
+ *
+ */
 
-#endif
-
-
+int main(void)
+{
+	printf("%s\n", _FILE_);
+	return (0);
+}
