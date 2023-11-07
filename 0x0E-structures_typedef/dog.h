@@ -8,7 +8,7 @@
 	 * @owner: Owner of the struct dog
 	 * @Description: it describes the age name and owner of the struct dog
 	 */
-struct dog_t
+	dog_t
 	{
 		char *name;
 		float age;
